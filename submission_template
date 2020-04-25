@@ -1,0 +1,20 @@
+#include  <iostream>
+#include  <stdio.h>
+int  main() {
+    //  loop  over  all  test  cases
+    int t;
+    scanf("%d", t);
+    for(int i = 1; i  <= t; i++) {
+        //  read  several  types  of  input
+        int j;
+        std:: string  s1;
+        char s2 [101];
+        //  use  the  possibility  you  like  more
+        std::cin  >> j >> s1;
+        scanf("%d %100s", &j, s2);
+        //  output: use  the  possibility  you  like  more
+        std::cout  << "Case #" << i << ": " << s1 << std::endl;
+        printf("Case #%d: %s %d", i, s2, j);
+    }
+    return  0;
+}
