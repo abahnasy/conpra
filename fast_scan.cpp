@@ -34,13 +34,13 @@ void fastscan(int &number)
         number *= -1;
 }
 
-int main()
-{
-    int number;
-    int number_2;
-    fastscan(number);
-    fastscan(number_2);
-    std::cout << number << " " << number_2 << "\n";
-    return 0;
-}
+//int main()
+//{
+//    int number;
+//    int number_2;
+//    fastscan(number);
+//    fastscan(number_2);
+//    std::cout << number << " " << number_2 << "\n";
+//    return 0;
+//}
 
