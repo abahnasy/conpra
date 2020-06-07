@@ -1,7 +1,11 @@
-#include <iostream>
-
+//#include <iostream>
+//
+//using namespace std;
 //int main()
 //{
-//    std::cout<<"Hello, World!"<<std::endl;
+//    cout << "Case #1: \n";
+//    cout << 2 << "\n";
+//    cout << "Case #2: \n";
+//    cout << 1 <<" "<< 2 << "\n";
 //    return 0;
 //}
