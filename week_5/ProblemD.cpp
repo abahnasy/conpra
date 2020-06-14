@@ -138,9 +138,9 @@
 ////    cin.tie(0);
 //
 //    // redirect input stream to samples files
-////    freopen("../week_5/samples_05/footballchampion/1.in", "r", stdin);
-////    freopen("../week_5/samples_05/footballchampion/2.in", "r", stdin);
-////    freopen("../week_5/samples_05/footballchampion/unitTest.in", "r", stdin);
+////    freopen("../../week_5/samples_05/footballchampion/1.in", "r", stdin);
+////    freopen("../../week_5/samples_05/footballchampion/2.in", "r", stdin);
+////    freopen("../../week_5/samples_05/footballchampion/unitTest.in", "r", stdin);
 //
 //
 //    int test_cases;

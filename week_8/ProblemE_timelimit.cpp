@@ -106,9 +106,9 @@
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(0);
 //    // redirect input stream to samples files
-////    freopen("../week_8/samples_08/escapingtheparadox/1.in", "r", stdin);
-////    freopen("../week_8/samples_08/escapingtheparadox/2.in", "r", stdin);
-////    freopen("../week_8/samples_08/escapingtheparadox/test.in", "r", stdin);
+////    freopen("../../week_8/samples_08/escapingtheparadox/1.in", "r", stdin);
+////    freopen("../../week_8/samples_08/escapingtheparadox/2.in", "r", stdin);
+////    freopen("../../week_8/samples_08/escapingtheparadox/test.in", "r", stdin);
 //
 //    int test_cases;
 //    cin>> test_cases;

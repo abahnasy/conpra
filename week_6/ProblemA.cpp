@@ -31,8 +31,8 @@
 //    cin.tie(0);
 //
 //    // redirect input stream to samples files
-////    freopen("../week_6/samples_06/alarmclock/1.in", "r", stdin);
-////    freopen("../week_6/samples_06/alarmclock/unit_test.in", "r", stdin);
+////    freopen("../../week_6/samples_06/alarmclock/1.in", "r", stdin);
+////    freopen("../../week_6/samples_06/alarmclock/unit_test.in", "r", stdin);
 //
 //
 //    int test_cases;

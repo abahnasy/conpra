@@ -69,9 +69,9 @@
 //int main () {
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(0);
-////    freopen("../week_6/samples_06/trapped/1.in", "r", stdin);
-////    freopen("../week_6/samples_06/trapped/2.in", "r", stdin);
-////    freopen("../week_6/samples_06/trapped/unit_test.in", "r", stdin);
+////    freopen("../../week_6/samples_06/trapped/1.in", "r", stdin);
+////    freopen("../../week_6/samples_06/trapped/2.in", "r", stdin);
+////    freopen("../../week_6/samples_06/trapped/unit_test.in", "r", stdin);
 //
 //    int test_cases;
 //    cin >> test_cases;

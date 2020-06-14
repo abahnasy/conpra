@@ -146,9 +146,9 @@
 //int main () {
 //
 //    // redirect input stream to samples files
-////    freopen("../week_5/samples_05/finedining/1.in", "r", stdin);
-////    freopen("../week_5/samples_05/finedining/2.in", "r", stdin);
-////    freopen("../week_5/samples_05/finedining/unitTest.in", "r", stdin);
+////    freopen("../../../../week_5/samples_05/finedining/1.in", "r", stdin);
+////    freopen("../../week_5/samples_05/finedining/2.in", "r", stdin);
+////    freopen("../../week_5/samples_05/finedining/unitTest.in", "r", stdin);
 //
 //    std::ios_base::sync_with_stdio(false);
 //    int test_cases;

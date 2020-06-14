@@ -147,7 +147,7 @@
 //int main () {
 //    std::ios_base::sync_with_stdio(false);
 //    cin.tie(0);
-////    freopen("../week_5/samples_05/connectivity/1.in", "r", stdin);
+////    freopen("../../week_5/samples_05/connectivity/1.in", "r", stdin);
 //    int test_cases;
 //    cin >> test_cases;
 //    for (int t = 1; t <= test_cases; t++) {

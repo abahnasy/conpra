@@ -50,9 +50,9 @@
 //
 //
 //    // redirect input stream to samples files
-////    freopen("../week_6/samples_06/muffinqueen/1.in", "r", stdin);
-////    freopen("../week_6/samples_06/muffinqueen/2.in", "r", stdin);
-//    freopen("../week_6/samples_06/muffinqueen/unit_test.in", "r", stdin);
+////    freopen("../../week_6/samples_06/muffinqueen/1.in", "r", stdin);
+////    freopen("../../week_6/samples_06/muffinqueen/2.in", "r", stdin);
+//    freopen("../../week_6/samples_06/muffinqueen/unit_test.in", "r", stdin);
 //    int T, put = 0, skip = 0;
 //    ios::sync_with_stdio(0);
 //    cin>>T;

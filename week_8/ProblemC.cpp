@@ -119,8 +119,8 @@
 //    cin.tie(0);
 //
 //    // redirect input stream to samples files
-////    freopen("../week_8/samples_08/packingcases/1.in", "r", stdin);
-////    freopen("../week_8/samples_08/packingcases/test.in", "r", stdin);
+////    freopen("../../week_8/samples_08/packingcases/1.in", "r", stdin);
+////    freopen("../../week_8/samples_08/packingcases/test.in", "r", stdin);
 //
 //    int test_cases;
 //    cin>> test_cases;

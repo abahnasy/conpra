@@ -52,8 +52,8 @@
 //    cin.tie(0);
 //
 //    // redirect input stream to samples files
-//    freopen("../week_8/samples_08/makingchange/1.in", "r", stdin);
-////    freopen("../week_8/samples_08/makingchange/2.in", "r", stdin);
+//    freopen("../../week_8/samples_08/makingchange/1.in", "r", stdin);
+////    freopen("../../week_8/samples_08/makingchange/2.in", "r", stdin);
 //
 //    int test_cases;
 //    cin>> test_cases;

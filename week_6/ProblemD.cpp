@@ -218,8 +218,8 @@
 //int main () {
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(0);
-////    freopen("../week_6/samples_06/queensproblem/1.in", "r", stdin);
-////    freopen("../week_6/samples_06/queensproblem/unitTest.in", "r", stdin);
+////    freopen("../../week_6/samples_06/queensproblem/1.in", "r", stdin);
+////    freopen("../../week_6/samples_06/queensproblem/unitTest.in", "r", stdin);
 //    int test_cases;
 //    cin >> test_cases;
 //    for (int t = 1; t <= test_cases; ++t) {
