@@ -6,49 +6,26 @@ typedef long long ll;
 
 using namespace std;
 
-struct Point {
-    int x, y;
+
+struct event {
+    int ind, type;
+    event() {}
+    event(int ind, int type) : ind(ind), type(type) {}
 };
+struct point {  int x, y;   };
+const int ENTRY = 0, EXIT = 1;
+const int RECT_MAX = 1000+9;
 
-bool doOverlap(Point l1, Point r1, Point l2, Point r2)
-{
-    // If one rectangle is on left side of other
-    if (l1.x >= r2.x || l2.x >= r1.x)
-        return false;
+point rects[RECT_MAX][2];
+bool inActiveSet[RECT_MAX];
+event events_v[2 * RECT_MAX], events_h[2 * RECT_MAX];
 
-    // If one rectangle is above other
-    if (l1.y >= r2.y || l2.y >= r1.y)
-        return false;
-
-    return true;
+bool cmpX(event a, event b) {
+    return rects[a.ind][a.type].x < rects[b.ind][b.type].x;
 }
-
-ll overlappingArea(Point l1, Point r1,
-                    Point l2, Point r2)
-{
-//    // Area of 1st Rectangle
-//    int area1 = abs(l1.x - r1.x) *
-//                abs(l1.y - r1.y);
-//
-//    // Area of 2nd Rectangle
-//    int area2 = abs(l2.x - r2.x) *
-//                abs(l2.y - r2.y);
-
-    // Length of intersecting part i.e
-    // start from max(l1.x, l2.x) of
-    // x-coordinate and end at min(r1.x,
-    // r2.x) x-coordinate by subtracting
-    // start from end we get required
-    // lengths
-    ll areaI = (min(r1.x, r2.x) -
-                 max(l1.x, l2.x)) *
-                (min(r1.y, r2.y) -
-                 max(l1.y, l2.y));
-    return areaI;
-
-//    return (area1 + area2 - areaI);
+bool cmpY(event a, event b) {
+    return rects[a.ind][a.type].y < rects[b.ind][b.type].y;
 }
-
 
 int main() {
     ios_base::sync_with_stdio(false);
@@ -56,42 +33,45 @@ int main() {
     // redirect input stream to samples files
 //    freopen("../../week_13/samples_13/boxunion/1.in", "r", stdin);
 //    freopen("../../week_13/samples_13//2.in", "r", stdin);
-//    freopen("../../week_13/samples_13//test.in", "r", stdin);
+//    freopen("../../week_13/samples_13/boxunion/test.in", "r", stdin);
     int test_cases;
     cin >> test_cases;
-
-    int n;
-
     for (int t = 1; t <= test_cases; ++t) {
         cout << "Case #" << t << ": ";
+        long long area = 0;
+        int n = 0, eventsCnt = 0;  // # rectangles, edges
         cin >> n;
-        vector<pair<Point, Point>> rectangles;
-        vector<ll> areas;
-        ll total_area = 0;
-        Point l, r;
         for (int i = 0; i < n; ++i) {
-            cin >> l.x >> l.y >> r.x >> r.y;
-            rectangles.push_back({l, r});
-            ll area = (r.x - l.x) *(r.y- l.y);
-            total_area += area;
-            areas.push_back(area);
+            cin >> rects[i][0].x >> rects[i][0].y >> rects[i][1].x >> rects[i][1].y;
+            events_v[eventsCnt] = event(i, ENTRY), events_v[eventsCnt + 1] = event(i, EXIT);
+            events_h[eventsCnt] = event(i, ENTRY), events_h[eventsCnt + 1] = event(i, EXIT);
+            eventsCnt += 2;
         }
-        for (int i = 0; i < n; ++i) {
-            for (int j = i+1; j < n; ++j) {
-                if(doOverlap(rectangles[i].first, rectangles[i].second, rectangles[j].first, rectangles[j].second)) {
-                    ll areaI = overlappingArea(rectangles[i].first, rectangles[i].second, rectangles[j].first, rectangles[j].second);
-                    total_area -= areaI;
-                }
+        sort(events_v, events_v + eventsCnt, cmpX);
+        sort(events_h, events_h + eventsCnt, cmpY);
 
+        inActiveSet[events_v[0].ind] = 1;
+        for (int v = 1; v < eventsCnt; ++v) {  // Vertical sweep
+            event c = events_v[v], p = events_v[v - 1];
+            int cnt = 0, first_rect, delta_x, delta_y;
+
+            if ((delta_x = rects[c.ind][c.type].x - rects[p.ind][p.type].x) == 0) {
+                inActiveSet[c.ind] = (c.type == ENTRY);
+                continue;
             }
+            for (int h = 0; h < eventsCnt; ++h)
+                if (inActiveSet[events_h[h].ind]) {  // Horizontal sweep
+                    if (events_h[h].type == ENTRY) {
+                        if (cnt++ == 0)
+                            first_rect = h;
+                    } else if (--cnt == 0) {
+                        delta_y = rects[events_h[h].ind][EXIT].y - rects[events_h[first_rect].ind][ENTRY].y;
+                        area += delta_x * delta_y;
+                    }
+                }
+            inActiveSet[c.ind] = (c.type == ENTRY);
         }
 
-        cout << total_area << "\n";
-
-
-
-
-
-
+        cout << area << "\n";
     }
 }
